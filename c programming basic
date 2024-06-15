@@ -1,0 +1,507 @@
+1.
+#include<stdio.h>
+int main()
+{
+   float a,b,sum,sub,mult,divi;
+   a = 95.401;
+   b = 22.622;
+
+   sum = a + b;
+   printf("a + b =  %f\n",sum); 
+
+   sub = a - b;
+   printf("a - b =  %f\n",sub);
+
+   mult = a * b;
+   printf("a * b =  %f\n",mult);
+
+   divi = a / b;
+   printf("a / b =  %f",divi);
+    
+    return 0;
+}
+
+
+
+
+
+2.
+#include<stdio.h>
+int main()
+{
+   int taka,amound;
+   printf("Enter the amound =");
+   scanf("%d",&amound);
+
+   taka = amound / 500;
+   amound = amound - (taka * 500);
+   printf("%d Note(s) of 500 \n",taka);
+
+   taka = amound / 100;
+   amound = amound - (taka * 100);
+   printf("%d Note(s) of 100 \n",taka);
+    
+
+   taka = amound / 50;
+   amound = amound - (taka * 50);
+   printf("%d Note(s) of 50 \n",taka);
+
+   taka = amound / 10;
+   amound = amound - (taka * 10);
+   printf("%d Note(s) of 10 \n",taka);
+
+   taka = amound / 5;
+   amound = amound - (taka * 5);
+   printf("%d Note(s) of 5 \n",taka);
+
+   taka = amound / 1;
+   amound = amound - (taka * 1);
+   printf("%d Note(s) of 1 \n",taka);
+    
+    
+    return 0;
+}
+
+
+
+
+
+
+3.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a,x,y;
+
+ 
+    printf("Enter a float number: ");
+    scanf("%f",&a);
+ 
+    x =floor(a);
+    y =ceil(a);
+
+    printf("Floor = %.0f \n",x);
+    printf("Ceiling = %.0f",y);
+    return 0;
+}
+
+3.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    double x,result;
+    printf("Enter the value of x :");
+    scanf("%lf",&x);
+
+    result = floor(x);
+    printf("floor (%.1lf) = %.0lf",x,result);
+
+    result = ceil(x);
+    printf("\nceil (%.1lf) = %.0lf",x,result);
+
+    return 0;
+}
+
+
+
+
+
+
+4.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+   int x;
+   double result;
+
+   printf("Enter the value of x :");
+   scanf("%d",&x);
+
+   result = 2 * pow(cos(x),2) - sqrt(3) * sin(x) + sin(x/2);
+   printf("Result is : %.6lf",result);
+
+
+   return 0;
+}
+
+
+
+5.
+#include<stdio.h>
+int main()
+{
+    int year;
+    printf("Enter the year :");
+    scanf("%d",&year);
+
+
+    if(year % 400 == 0)
+    printf("This year is Leap Year ");
+
+
+         else if(year % 4 == 0 && year % 100 != 0)
+         printf("This year is Leap Year ");
+
+            
+    else   
+    printf("This year is Not Leap Year");
+
+    return 0;
+}
+
+
+
+
+6.
+#include<stdio.h>
+int main()
+{
+    char ch;
+    printf("Enter  any character from the keyboard : ");
+    scanf("%c",&ch);
+
+    if(ch >= 'a' && ch <= 'z' || ch >= 'A' && ch <= 'Z')
+    printf(" Alphabet ");
+
+
+         else if (ch >= '0' && ch <= '9')
+         printf(" Digit ");
+
+
+    else
+    printf(" Special ");
+
+    return 0;
+}
+
+
+
+7.
+#include<stdio.h>
+int main()
+{
+
+int i,n,a;
+printf("Loop size : ");
+scanf("%d",&n);
+
+for(i=n;i>=1;i--)
+{
+    printf("Enter the guessing number : ");
+    scanf("%d",&a);
+    
+    if(a==10)
+    {
+        printf("right,player-2 wins\n");
+        break;
+    }
+    else if(a!=10)
+    {
+        printf("Wrong, %d Chance(s) Left!\n",i-1);
+    }
+    else
+    {
+        printf("player-1 wins");
+    }
+}
+
+
+    return 0;
+}
+
+
+
+
+8.
+#include<stdio.h>
+int main()
+{
+    int n,row,col;
+    printf("Enter the number :");
+    scanf("%d",&n);
+    
+
+    for(row=1; row<=n; row++)
+    {
+     for(col=1; col<=row; col++)
+        {
+
+            printf("%d",col%2);
+
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+9.
+#include<stdio.h>
+int main()
+{
+
+int n,r,sum=0;
+printf("Enter the number :");
+scanf("%d",&n);
+
+
+while(n!=0)
+{
+    r = n % 10;
+    Sum = sum * 10 + r;
+    n = n / 10;
+}
+printf("The reverse number is : %d”,sum);
+
+
+
+    return 0;
+
+
+}
+
+
+
+10.
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+
+int i,n,a,sum=0;
+printf("Enter the number :");
+scanf("%d",&n);
+
+for(i=0;i<=n;i++)
+{
+    a = pow(i,2) * (i+1);
+    sum = sum + a;
+}
+printf("Result is : %d",sum);
+
+ return 0;
+
+}
+
+
+
+
+
+11.
+#include<stdio.h>
+int main()
+{
+
+int i,n,fact=1;
+printf("Enter the number : ");
+scanf("%d",&n);
+
+for(i=1;i<=n;i++)
+{
+    fact = fact * i;
+}
+printf("The factorial is : %d",fact);
+
+
+    return 0;
+
+
+}
+
+
+
+
+
+
+12.
+#include<stdio.h>
+int main()
+{
+
+int n,r,sum=0,temp;
+printf("Enter the number :");
+scanf("%d",&n);
+
+temp = n;
+while(n!=0)
+{
+    r = n % 10;
+    sum = sum * 10 + r;
+    n = n / 10;
+}
+if(temp == sum)
+printf(" Palindrome ");
+
+else
+ printf("Not Palindrome");
+
+
+ return 0;
+
+
+
+
+
+
+
+
+
+  2.Triangle Type Determination 
+
+
+#include<stdio.h>
+int main()
+{
+
+float a,b,c;
+printf("Enter  three sides number :");
+scanf("%f %f %f",&a,&b,&c);
+
+if((a+b)<c)
+{
+    printf("Invalid Sides");
+}
+else
+{
+    if(a==b && b==c && a==c)
+    {
+        printf("Equilateral");
+    }
+    else if(a==b && b!=c || b==c && c!=a || a==c && a!=b)
+    {
+        printf("Isosceles");
+    }
+    else
+    {
+        printf("Scalene");
+    }
+}
+
+    return 0;
+}
+
+
+3. Maximum of Three Numbers 
+#include<stdio.h>
+int main()
+{
+
+int a,b,c;
+printf("Enter the three numbers :");
+scanf("%d %d %d",&a,&b,&c);
+if(a>b && a>c)
+{
+    printf("Maximum is : %d",a);
+}
+else if(b>a && b>c)
+{
+    printf("Maximum is : %d",b);
+}
+else
+{
+    printf("Maximum is : %d",c);
+}
+
+    return 0;
+}
+
+
+4. Determine if a number is a power of Two 
+#include<stdio.h>
+int main()
+{
+int n;
+printf("Enther any integer number :");
+scanf("%d",&n);
+if(n <= 0)
+{
+    printf("INVALID");
+}
+else if((n & (n - 1)) == 0)
+{
+    printf("Yes");
+}
+else
+{
+    printf("No");
+}
+
+
+    return 0;
+}
+
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+int n;
+printf("Enther any integer number :");
+scanf("%d",&n);
+if(n <= 0)
+{
+    printf("INVALID");
+}
+else if(ceil(log(n)/log(2)) == floor (log(n)/log(2)))
+{
+    printf("Yes");
+}
+else
+{
+    printf("No");
+}
+
+
+    return 0;
+}
+
+
+5. Separate digits from an integer 
+#include<stdio.h>
+int main()
+{
+
+    int i, a, x1, x2, x3;
+    printf("Enther the three number :");
+    scanf("%d", &a);
+
+    for(i=0; a!=0; i++)
+    {
+        if(i == 0)
+        {
+            x1 = a%10;
+        }
+        else if(i == 1)
+        {
+            x2 = a%10;
+        }
+        else if(i == 2)
+        {
+            x3 = a%10;
+        }
+
+        a = a/10;
+    }
+
+    printf("%d-%d-%d", x3, x2, x1);
+    
+    return 0;
+}
+
+
+
+
+
+
+}
+
+
